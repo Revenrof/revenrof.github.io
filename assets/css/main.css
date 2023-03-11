@@ -598,7 +598,7 @@ section {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 106, 93, 0.8);
+    background: rgba(38, 128, 255, 0.8);
     z-index: 9996;
   }
 }
