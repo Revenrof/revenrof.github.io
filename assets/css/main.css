@@ -597,7 +597,7 @@ section {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 106, 93, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* rgba(0, 106, 93, 0.8); */
     z-index: 9996;
   }
 }
