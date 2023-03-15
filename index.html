@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>de'Luna Karaoke</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -1019,7 +1019,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="my-form" action="https://formspree.io/f/xyyapozg" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" required>
@@ -1029,15 +1029,15 @@
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subyek" id="subject" placeholder="Subyek" required>
+                <input type="text" class="form-control" name="subyek" id="subyek" placeholder="Subyek" required>
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="pesan" rows="7" placeholder="Pesan" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Pesan terkirim. Terimakasih!</div>
+                <!-- div class="loading">Loading</div>
+                <div class="error-message"></div -->
+                <div id="my-form-status" class="sent-message"></div>
               </div>
               <div class="text-center"><button type="submit">Kirim</button></div>
             </form>
@@ -1136,7 +1136,38 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 </body>
 
 </html>
