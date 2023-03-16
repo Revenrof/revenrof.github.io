@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #222222;
-  --color-primary: #008374;
+  --color-primary: #0055FF; /* #008374;*/
   --color-secondary: #f85a40;
 }
 
@@ -244,7 +244,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .topbar {
-  background: #00796b;
+  background: #004CE4;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -504,7 +504,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(0, 131, 116, 0.9);
+    background: rgba(0, 85, 255, 0.9);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -665,7 +665,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(var(--color-primary) 50%, rgba(0, 85, 255, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -686,10 +686,10 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(0, 85, 255, 0.7);
   top: -15%;
   left: -15%;
-  background: rgba(198, 16, 0, 0);
+  background: rgba(0, 85, 255, 0);
 }
 
 .about .play-btn:after {
@@ -847,7 +847,7 @@ section {
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(var(--color-primary) 50%, rgba(0, 85, 255, 0.4) 52%);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -866,10 +866,10 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(0, 85, 255, 0.7);
   top: -15%;
   left: -15%;
-  background: rgba(198, 16, 0, 0);
+  background: rgba(0, 85, 255, 0);
 }
 
 .call-to-action .play-btn:after {
@@ -1007,7 +1007,7 @@ section {
 }
 
 .services .service-item:hover .icon:before {
-  background: #00b6a1;
+  background: var(--color-primary);
 }
 
 .services .service-item:hover h3 {
@@ -1061,7 +1061,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #009d8b;
+  color: var(--color-primary);
   font-size: 26px;
   line-height: 0;
 }
@@ -1491,7 +1491,7 @@ section {
   height: 86px;
   width: 86px;
   border-radius: 50%;
-  background: #87c1bb;
+  background: rgba(0, 85, 255, 0.7);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -1502,7 +1502,7 @@ section {
   height: 102px;
   width: 102px;
   border-radius: 50%;
-  background: #d2eeeb;
+  background: rgba(0, 85, 255, 0.4);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-2px);
 }
@@ -1541,7 +1541,7 @@ section {
 }
 
 .pricing ul i {
-  color: #059652;
+  color: var(--color-primary);
   font-size: 24px;
   padding-right: 3px;
 }
@@ -1563,7 +1563,7 @@ section {
   padding: 10px 40px;
   border-radius: 50px;
   color: var(--color-primary);
-  border: 1px solid rgba(0, 131, 116, 0.2);
+  border: 1px solid rgba(0, 85, 255, 0.4);
   transition: none;
   font-size: 16px;
   font-weight: 600;
@@ -1731,7 +1731,7 @@ section {
 
 .contact .info-item {
   width: 100%;
-  background-color: #009282;
+  background-color: #1E69ff;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -1845,6 +1845,7 @@ section {
 
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type=tel]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--color-primary);
 }
@@ -1863,7 +1864,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgba(0, 131, 116, 0.8);
+  background: #1E69ff;
 }
 
 @keyframes animate-loading {
@@ -1975,7 +1976,7 @@ section {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: #008d7d;
+  background: #1E69ff; /*#008d7d;*/
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -2007,7 +2008,7 @@ section {
 }
 
 .hero .icon-box:hover {
-  background: #009786;
+  background: #3a7bff;
 }
 
 .hero .icon-box:hover .title a,
