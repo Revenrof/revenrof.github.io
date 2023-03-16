@@ -190,6 +190,12 @@ section {
   bottom: 15px;
 }
 
+.toast-container {
+	position: fixed;
+	top: 25%;
+	left: 50%;
+    transform: translate(-50%, 0);
+	}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -972,7 +978,7 @@ section {
   border-radius: 50px;
   z-index: 1;
   top: 10px;
-  right: -20px;
+  right: -10px;
   transition: 0.3s;
 }
 
