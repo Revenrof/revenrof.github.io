@@ -1042,6 +1042,16 @@
               </div>
               <div class="text-center"><button type="submit">Kirim</button></div>
             </form>
+            <div class="position-fixed top-0 start-50 translate-middle-x pt-5" style="z-index: 59999">
+              <div class="toast hide bg-dark px-2" role="alert">
+                <div class="d-flex align-items-start">
+                  <div class="toast-body">
+                    form state
+                  </div>
+                   <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                 </div>
+               </div>
+             </div>
           </div><!-- End Contact Form -->
 
         </div>
@@ -1142,7 +1152,7 @@
     
     async function handleSubmit(event) {
       event.preventDefault();
-      var status = document.getElementById("my-form-status");
+      var status = document.querySelector('.toast-body');
       var data = new FormData(event.target);
       fetch(event.target.action, {
         method: form.method,
@@ -1153,6 +1163,7 @@
       }).then(response => {
         if (response.ok) {
           status.innerHTML = "Thanks for your submission!";
+          toastList.forEach((toast) => toast.show());
           form.reset()
         } else {
           response.json().then(data => {
@@ -1164,10 +1175,15 @@
           })
         }
       }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
+        status.innerHTML = "Oops! There was a problem submitting your form";
+        toastList.forEach((toast) => toast.show());
       });
     }
-    form.addEventListener("submit", handleSubmit)
+    form.addEventListener("submit", handleSubmit);
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+    var toastList = toastElList.map(function (toastEl) {
+      return new bootstrap.Toast(toastEl);
+      });
 </script>
 </body>
 
