@@ -1034,24 +1034,8 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="pesan" rows="7" placeholder="Pesan" required></textarea>
               </div>
-              <div class="my-3">
-                <!-- div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div id="my-form-status" class="sent-message"></div> -->
-                <p id="my-form-status"></p>
-              </div>
               <div class="text-center"><button type="submit">Kirim</button></div>
             </form>
-            <div class="d-flex justify-content-center align-items-center" style="z-index: 59999">
-              <div class="toast hide bg-dark text-light px-2" role="alert">
-                <div class="d-flex align-items-start">
-                  <div class="toast-body">
-                    form state
-                  </div>
-                   <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-                 </div>
-               </div>
-             </div>
           </div><!-- End Contact Form -->
 
         </div>
@@ -1131,7 +1115,14 @@
 
   </footer><!-- End Footer -->
   <!-- End Footer -->
-
+  <div class="toast-container d-flex align-items-center justify-content-center">
+    <div class="toast hide bg-dark text-light p-2" role="alert">
+      <div class="d-flex align-items-start">
+        <div class="toast-body">form state</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>        
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
