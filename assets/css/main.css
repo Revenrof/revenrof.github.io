@@ -570,7 +570,7 @@ section {
   }
 
   .mobile-nav-show {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 1);
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
