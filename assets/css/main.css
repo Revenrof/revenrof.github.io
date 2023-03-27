@@ -829,6 +829,7 @@ section {
   background-image: url("../img/cta-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
   overflow: hidden;
 }
 
