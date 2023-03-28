@@ -825,19 +825,16 @@ section {
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
-.call-to-action {
+.call-to-action .container {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.call-to-action .container {
   padding: 100px 60px;
   overflow: hidden;
 }
 
 @media (min-width: 575px) {
-  .call-to-action {
+  .call-to-action .container{
     border-radius: 15px;
   }
 }
