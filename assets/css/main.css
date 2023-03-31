@@ -1875,6 +1875,12 @@ section {
   background: #1E69ff;
 }
 
+@media (max-width: 991px) {
+  .contact .info-container, .contact .php-email-form {
+    border-radius: 10px;
+    }
+  }
+
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
